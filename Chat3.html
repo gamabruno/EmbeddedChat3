@@ -1,28 +1,64 @@
-<html><head><script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/jslibrary/1721157841252/sfdc/main.js" type="text/javascript"></script><script src="/jslibrary/jslabels/1733352047000/pt_BR.js" type="text/javascript"></script><link class="user" href="/sCSS/62.0/sprites/1729589050000/Theme3/default/gc/zen-componentsCompatible.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1729589050000/Theme3/default/gc/elements.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1729589050000/Theme3/default/gc/common.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1730970246000/Theme3/gc/dStandard.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1730970246000/Theme3/00DDO0000008fn6/005Dn0000017Vqc/gc/dCustom0.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1729589050000/Theme3/default/gc/extended.css" rel="stylesheet" type="text/css"><link class="user" href="/sCSS/62.0/sprites/1729589050000/Theme3/default/gc/setup.css" rel="stylesheet" type="text/css"><script src="/jslibrary/1698336665252/sfdc/NetworkTracking.js" type="text/javascript"></script><script>try{ NetworkTracking.init('/_ui/networks/tracking/NetworkTrackingServlet', 'network', '066DO000000L5uV'); }catch(x){}</script><script>(function(UITheme) {
-    UITheme.getUITheme = function() { 
-        return UserContext.uiTheme;
-    };
-}(window.UITheme = window.UITheme || {}));</script><link id="embeddedMessagingBootstrapStyles" href="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/styles/bootstrap.min.css" type="text/css" rel="stylesheet"><title></title></head><body>
-  <script type="text/javascript">
-     function initEmbeddedMessaging() {
-        try {
-            embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
+<html>
+<body>
+      <div id="bgImage"></div>
+      <div id="mainContainer">
+          <div id="logoContainer">
+              <img alt="Salesforce logo" id="logo" src="https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg" width="65px">
+          </div>
+          <div id="bodyContainer">
+              <h1>Teste sua implementação de mensagens</h1>
+              <ol>
+                  <li>Na guia do navegador anterior em que você entrou no Salesforce, abra o console do agente.</li>
+                  <li>No utilitário Omni-Channel ou na barra lateral, coloque-se à disposição para aceitar sessões de mensagens recebidas.<br>
+                     <button id="accordion">
+                        <img class="chevronright" src="/apexpages/slds/latest/assets/icons/utility/chevronright_60.png">
+                        <img class="chevrondown" src="/apexpages/slds/latest/assets/icons/utility/chevrondown_60.png">
+                        Mostre-me onde
+                     </button>
+                     <div id="videoDemoContainer">
+                        <div class="vidyard-player-container" uuid="6udN7LzkmqU8RgRvyoKDrS" style="margin: auto; width: 100%; height: auto; overflow: hidden; display: block; max-width: 330px; max-height: 452px;"><div class="vidyard-div-6udN7LzkmqU8RgRvyoKDrS" role="region" aria-label="Vidyard media player" style="position: relative; padding-bottom: 136.88%; height: 0px; overflow: hidden; max-width: 100%; background-color: transparent;"><div class="vidyard-inner-container-6udN7LzkmqU8RgRvyoKDrS" style="position: absolute;height: 100%; width: 100%; max-width: 330px; max-height: 452px; " data-pl="false"> <iframe allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture; clipboard-write" allowfullscreen="" allowtransparency="true" referrerpolicy="no-referrer-when-downgrade" class="vidyard-iframe-6udN7LzkmqU8RgRvyoKDrS" frameborder="0" height="100%" width="100%" scrolling="no" src="https://play.vidyard.com/6udN7LzkmqU8RgRvyoKDrS?disable_popouts=1&amp;type=inline&amp;v=4.3.15" title="Try Out Chat" style="opacity: 1; background-color: transparent; position: absolute; top: 0px; left: 0px;"></iframe><img class="vidyard-player-embed inserted" data-height="452" data-type="inline" data-uuid="6udN7LzkmqU8RgRvyoKDrS" data-v="4" data-width="330" src="https://play.vidyard.com/6udN7LzkmqU8RgRvyoKDrS.jpg" style="display: none; max-width: 330px; max-height: 452px;" data-rendered="true"></div> </div></div>
+                     </div></li>
+                  <li>Nessa guia, abra a janela de conversa de Mensagens e envie uma mensagem como um cliente.</li>
+                  <li>No Salesforce, aceite a sessão de mensagens e envie uma resposta.</li>
+                  <li>Estabeleça um diálogo e encerre a conversa.</li>
+              </ol>
+          </div>
+      </div>
+      <script>
+            var videoAccordion = document.getElementById("accordion");
+            videoAccordion.addEventListener("click", function() {
+            this.classList.toggle("active");
 
-            embeddedservice_bootstrap.init(
-                '00DDO0000008fn6',
-                'Chat_Bot',
-                'https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830',
-                {
-                    scrt2URL: 'https://powpaybra--qa.sandbox.my.salesforce-scrt.com/'
-                }
-            );
-        } catch (err) {
-            console.error('Error loading Embedded Messaging: ', err);
-        }
-    };
+            var videoContainer = this.nextElementSibling;
+            if (videoContainer.style.display === "block") {
+                videoContainer.style.display = "none";
+            } else {
+                videoContainer.style.display = "block";
+            }
+        });
+        </script>
+    
+      <script type="text/javascript">
+ function initEmbeddedMessaging() {
+  try {
+   embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
+
+   embeddedservice_bootstrap.init(
+    '00DDO0000008fn6',
+    'Chat_Bot',
+    'https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830',
+    {
+     scrt2URL: 'https://powpaybra--qa.sandbox.my.salesforce-scrt.com'
+    }
+   );
+  } catch (err) {
+   console.error('Error loading Embedded Messaging: ', err);
+  }
+ };
 </script>
-<script onload="initEmbeddedMessaging()" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/js/bootstrap.min.js" type="text/javascript"></script><script>if (this.SfdcApp && this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneNavigator.sendTitleToParent('Bot'); } </script><iframe class="embeddedMessagingSiteContextFrame" id="embeddedMessagingSiteContextFrame" name="embeddedMessagingSiteContextFrame" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/htdocs/sitecontext.min.html?parent_domain=https%3A%2F%2Fpowpaybra--qa--c.sandbox.vf.force.com"></iframe><div id="embedded-messaging" class="embedded-messaging"><div class="embeddedMessagingConversationButtonWrapper"><button class="embeddedMessagingConversationButton embeddedMessagingConversationButtonLoaded no-hover" id="embeddedMessagingConversationButton" tabindex="-1" role="button" aria-label="Minimizar a janela do chat" title="Minimizar a janela do chat" dir="ltr" style="--eswHeaderColor: #1A1B1E; --eswSecondaryColor: #005290; display: none;"><div id="embeddedMessagingIconContainer" class="embeddedMessagingIconContainer"><svg focusable="false" aria-hidden="true" viewBox="0 0 100 100" id="embeddedMessagingIconMinimize" class="embeddedMessagingIconMinimize">
-<path d="M47.6,17.8L27.1,38.5c-0.6,0.6-1.6,0.6-2.2,0L4.4,17.8c-0.6-0.6-0.6-1.6,0-2.2l2.2-2.2 c0.6-0.6,1.6-0.6,2.2,0l16.1,16.3c0.6,0.6,1.6,0.6,2.2,0l16.1-16.2c0.6-0.6,1.6-0.6,2.2,0l2.2,2.2C48.1,16.3,48.1,17.2,47.6,17.8z"></path>
-</svg><svg focusable="false" aria-hidden="true" viewBox="0 0 100 100" id="embeddedMessagingIconChat" class="embeddedMessagingIconChat" style="display: none;">
+<script onload="initEmbeddedMessaging()" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+    
+  <script>if (this.SfdcApp && this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneNavigator.sendTitleToParent('ESWChatBot1697641246830'); } </script><iframe class="embeddedMessagingSiteContextFrame" id="embeddedMessagingSiteContextFrame" name="embeddedMessagingSiteContextFrame" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/htdocs/sitecontext.min.html?parent_domain=https%3A%2F%2Fpowpaybra--qa--c.sandbox.vf.force.com"></iframe><link rel="prefetch" crossorigin="anonymous" href="https://play.vidyard.com/6udN7LzkmqU8RgRvyoKDrS?disable_popouts=1&amp;type=inline&amp;v=4.3.15"><div id="embedded-messaging" class="embedded-messaging"><div class="embeddedMessagingConversationButtonWrapper"><button class="embeddedMessagingConversationButton" id="embeddedMessagingConversationButton" tabindex="0" role="button" aria-label="Olá, tem alguma pergunta? Vamos conversar." title="Olá, tem alguma pergunta? Vamos conversar." dir="ltr" style="--eswHeaderColor: #1A1B1E; --eswSecondaryColor: #005290;"><div id="embeddedMessagingIconContainer" class="embeddedMessagingIconContainer"><svg focusable="false" aria-hidden="true" viewBox="0 0 100 100" id="embeddedMessagingIconChat" class="embeddedMessagingIconChat">
 <path d="M50 0c27.614 0 50 20.52 50 45.833S77.614 91.667 50 91.667c-8.458 0-16.425-1.925-23.409-5.323-13.33 6.973-21.083 9.839-23.258 8.595-2.064-1.18.114-8.436 6.534-21.767C3.667 65.54 0 56.08 0 45.833 0 20.52 22.386 0 50 0zm4.583 61.667H22.917a2.917 2.917 0 000 5.833h31.666a2.917 2.917 0 000-5.833zm12.5-15.834H22.917a2.917 2.917 0 000 5.834h44.166a2.917 2.917 0 000-5.834zM79.583 30H22.917a2.917 2.917 0 000 5.833h56.666a2.917 2.917 0 000-5.833z"></path>
-</svg></div></button></div><div id="embeddedMessagingModalOverlay" class="isMaximized"></div><iframe title="Bate-papo com um agente" class="embeddedMessagingFrame isMaximized" id="embeddedMessagingFrame" aria-label="Janela de chat" role="dialog" aria-modal="true" sandbox="allow-scripts allow-same-origin allow-modals allow-downloads allow-popups allow-popups-to-escape-sandbox" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/?lwc.mode=prod" dir="ltr" style="background-color: transparent;"></iframe></div><script id="inert-script" type="text/javascript" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/js/inert.min.js"></script><iframe class="embeddedMessagingFilePreviewFrame" id="embeddedMessagingFilePreviewFrame" name="embeddedMessagingFilePreviewFrame" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/htdocs/filepreview.min.html?parent_domain=https%3A%2F%2Fpowpaybra--qa--c.sandbox.vf.force.com" title="Visualização da imagem ampliada"></iframe></body></html>
+</svg></div></button></div></div><script id="inert-script" type="text/javascript" src="https://powpaybra--qa.sandbox.my.site.com/ESWChatBot1697641246830/assets/js/inert.min.js"></script></body></html>
